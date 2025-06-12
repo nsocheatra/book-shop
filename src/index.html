@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookly - Online Book Store</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Tailwind CSS file -->
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white py-4 sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">Bookly</a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-8">
+                <li><a href="categories.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Categories</a></li>
+                <li><a href="new-arrival.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">New Arrival</a></li>
+                <li><a href="best-seller.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Best Seller</a></li>
+                <li><a href="about-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
+                <li><a href="contact-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
+            </ul>
+
+            <div class="flex items-center gap-5">
+                <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login.html" class="hidden sm:inline-block bg-primary text-gray-700 py-2 px-6 rounded-full transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-primary/30">Login</a>
+                <button class="lg:hidden text-2xl text-gray-600">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Cover -->
+        <section class="bg-secondary pt-16 pb-20 lg:py-24">
+            <div class="container mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-5">Where Every Page is a New Adventure</h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">Discover your next favorite book from our vast collection. Whether you're into thrilling mysteries, heartwarming romances, or epic fantasies, we have something for everyone.</p>
+                    <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:translate-y-[-3px] hover:shadow-xl hover:shadow-primary/40">Explore Books</a>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://i.ibb.co/Cbfdws6/hero-illustration.png" alt="A woman sitting on a stack of books and reading" class="max-w-sm md:max-w-md lg:max-w-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer -->
+        <section class="py-20">
+            <div class="container mx-auto px-5">
+                <h2 class="text-center text-4xl font-bold mb-12">What We Offer</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Offer Card 1 -->
+                    <div class="bg-white p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <i class="fa-solid fa-book-open text-4xl text-primary mb-4 inline-block"></i>
+                        <h3 class="text-xl font-semibold mb-2">Vast Collection</h3>
+                        <p class="text-gray-500">Thousands of books across all genres waiting to be discovered.</p>
+                    </div>
+                    <!-- Offer Card 2 -->
+                    <div class="bg-white p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <i class="fa-solid fa-truck-fast text-4xl text-primary mb-4 inline-block"></i>
+                        <h3 class="text-xl font-semibold mb-2">Fast Shipping</h3>
+                        <p class="text-gray-500">Get your books delivered to your doorstep in no time.</p>
+                    </div>
+                    <!-- Offer Card 3 -->
+                    <div class="bg-white p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <i class="fa-solid fa-gift text-4xl text-primary mb-4 inline-block"></i>
+                        <h3 class="text-xl font-semibold mb-2">Gift Cards</h3>
+                        <p class="text-gray-500">The perfect gift for the book lover in your life.</p>
+                    </div>
+                    <!-- Offer Card 4 -->
+                    <div class="bg-white p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <i class="fa-solid fa-star text-4xl text-primary mb-4 inline-block"></i>
+                        <h3 class="text-xl font-semibold mb-2">Top-rated Books</h3>
+                        <p class="text-gray-500">Curated lists of the best books loved by our community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-secondary py-20"></section>
+
+        <!-- Featured Books -->
+        <section class="bg-secondary py-20">
+            <div class="container mx-auto px-5">
+                <div class="flex flex-col sm:flex-row justify-between items-center mb-10">
+                     <h2 class="text-4xl font-bold">Featured Books</h2>
+                     <a href="#" class="font-semibold text-primary flex items-center gap-2 mt-4 sm:mt-0">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Scrollable container with custom scrollbar styles -->
+                <div class="flex gap-6 overflow-x-auto pb-4 -mx-5 px-5 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-slate-200 [&::-webkit-scrollbar-thumb]:bg-primary [&::-webkit-scrollbar-thumb]:rounded-full">
+                    <!-- Book Card 1 -->
+                    <div class="flex-shrink-0 w-[220px] bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2767052-the-hitchhiker-s-guide-to-the-galaxy.jpg" alt="Book Cover 1" class="w-full h-[300px] object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold truncate">The Galaxy Guide</h4>
+                            <p class="text-sm text-gray-500 mb-2">Douglas Adams</p>
+                            <div class="text-yellow-400 mb-1 text-sm">
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="font-bold text-lg text-primary">$19.99</p>
+                        </div>
+                    </div>
+                    <!-- Book Card 2 -->
+                    <div class="flex-shrink-0 w-[220px] bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463l/11127.jpg" alt="Book Cover 2" class="w-full h-[300px] object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold truncate">The Silent Patient</h4>
+                            <p class="text-sm text-gray-500 mb-2">Alex Michaelides</p>
+                            <div class="text-yellow-400 mb-1 text-sm">
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="font-bold text-lg text-primary">$22.50</p>
+                        </div>
+                    </div>
+                    <!-- Book Card 3 -->
+                    <div class="flex-shrink-0 w-[220px] bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1420585954l/19063.jpg" alt="Book Cover 3" class="w-full h-[300px] object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold truncate">To Kill a Mockingbird</h4>
+                            <p class="text-sm text-gray-500 mb-2">Harper Lee</p>
+                            <div class="text-yellow-400 mb-1 text-sm">
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="font-bold text-lg text-primary">$18.00</p>
+                        </div>
+                    </div>
+                    <!-- Book Card 4 -->
+                    <div class="flex-shrink-0 w-[220px] bg-white rounded-lg shadow-lg overflow-hidden transition-all dxuration-300 hover:shadow-xl hover:-translate-y-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550337333l/43801.jpg" alt="Book Cover 4" class="w-full h-[300px] object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold truncate">1984</h4>
+                            <p class="text-sm text-gray-500 mb-2">George Orwell</p>
+                            <div class="text-yellow-400 mb-1 text-sm">
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="font-bold text-lg text-primary">$15.75</p>
+                        </div>
+                    </div>
+                    <!-- Book Card 5 -->
+                    <div class="flex-shrink-0 w-[220px] bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630199330l/929.jpg" alt="Book Cover 5" class="w-full h-[300px] object-cover">
+                        <div class="p-4">
+                            <h4 class="font-semibold truncate">The Great Gatsby</h4>
+                            <p class="text-sm text-gray-500 mb-2">F. Scott Fitzgerald</p>
+                            <div class="text-yellow-400 mb-1 text-sm">
+                                <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="font-bold text-lg text-primary">$14.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-8">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-center md:text-left">
+                <!-- Column 1 -->
+                <div class="flex flex-col items-center md:items-start">
+                    <a href="#" class="text-2xl font-bold text-primary mb-4">Bookly</a>
+                    <p class="text-gray-500 mb-6">Your one-stop shop for all the books you love. Dive into a new world with every page.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-500 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Categories</a></li>
+                        <li><a href="new-arrival.html" class="text-gray-500 hover:text-primary transition-colors">New Arrival</a></li>
+                        <li><a href="best-seller.html" class="text-gray-500 hover:text-primary transition-colors">Best sellers</a></li>
+
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">About</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about-us.html" class="text-gray-500 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="termsofervice.html" class="text-gray-500 hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">Contact Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-location-dot w-4"></i>123 Book St, Reading City</a></li>
+                        <li><a href="mailto:hello@bookly.com" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-envelope w-4"></i>hello@bookly.com</a></li>
+                        <li><a href="tel:+1234567890" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-phone w-4"></i>+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-gray-200 text-gray-500">
+                <p>© 2024 Bookly. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

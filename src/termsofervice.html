@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookly - Online Book Store</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Tailwind CSS file -->
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+<!-- Header Section -->
+<header class="bg-white py-4 sticky top-0 z-50 shadow-sm">
+    <nav class="container mx-auto px-5 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold text-primary">Bookly</a>
+
+        <!-- Desktop Navigation -->
+        <ul class="hidden lg:flex items-center gap-8">
+            <li><a href="categories.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Categories</a></li>
+            <li><a href="new-arrival.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">New Arrival</a></li>
+            <li><a href="best-seller.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Best Seller</a></li>
+            <li><a href="about-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
+            <li><a href="contact-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+            <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.html" class="hidden sm:inline-block bg-primary text-gray-700 py-2 px-6 rounded-full transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-primary/30">Login</a>
+            <button class="lg:hidden text-2xl text-gray-600">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!--body section-->
+
+<!-- Footer -->
+<footer class="bg-white pt-20 pb-8">
+    <div class="container mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-center md:text-left">
+            <!-- Column 1 -->
+            <div class="flex flex-col items-center md:items-start">
+                <a href="#" class="text-2xl font-bold text-primary mb-4">Bookly</a>
+                <p class="text-gray-500 mb-6">Your one-stop shop for all the books you love. Dive into a new world with every page.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!-- Column 2 -->
+            <div>
+                <h4 class="text-lg font-semibold mb-5">Explore</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-gray-500 hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Categories</a></li>
+                    <li><a href="new-arrival.html" class="text-gray-500 hover:text-primary transition-colors">New Arrival</a></li>
+                    <li><a href="best-seller.html" class="text-gray-500 hover:text-primary transition-colors">Best sellers</a></li>
+
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div>
+                <h4 class="text-lg font-semibold mb-5">About</h4>
+                <ul class="space-y-3">
+                    <li><a href="about-us.html" class="text-gray-500 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="privacy-policy.html" class="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="termsofervice.html" class="text-gray-500 hover:text-primary transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Column 4 -->
+            <div>
+                <h4 class="text-lg font-semibold mb-5">Contact Info</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-location-dot w-4"></i>123 Book St, Reading City</a></li>
+                    <li><a href="mailto:hello@bookly.com" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-envelope w-4"></i>hello@bookly.com</a></li>
+                    <li><a href="tel:+1234567890" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-phone w-4"></i>+1 (234) 567-890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-8 border-t border-gray-200 text-gray-500">
+            <p>© 2024 Bookly. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
