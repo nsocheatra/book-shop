@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97473b09-84b7-422f-a3f5-abaee966bdd8" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/best-seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/best-seller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/new-arrival.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/new-arrival.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -106,7 +105,7 @@
       <workItem from="1749712951416" duration="2339000" />
       <workItem from="1749730714972" duration="2022000" />
       <workItem from="1749880641872" duration="599000" />
-      <workItem from="1749881906173" duration="4158000" />
+      <workItem from="1749881906173" duration="4888000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -148,7 +147,31 @@
       <option name="project" value="LOCAL" />
       <updated>1749886732918</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <option name="closed" value="true" />
+      <created>1749886954854</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749886954854</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <option name="closed" value="true" />
+      <created>1749887075888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749887075888</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update">
+      <option name="closed" value="true" />
+      <created>1749887088079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749887088079</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
