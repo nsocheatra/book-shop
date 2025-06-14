@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97473b09-84b7-422f-a3f5-abaee966bdd8" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/img/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/2.jpg" afterDir="false" />
+    <list default="true" id="97473b09-84b7-422f-a3f5-abaee966bdd8" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/best-seller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/best-seller.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/contact-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/new-arrival.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/new-arrival.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/privacy-policy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/termsofervice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/termsofervice.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +106,7 @@
       <workItem from="1749712951416" duration="2339000" />
       <workItem from="1749730714972" duration="2022000" />
       <workItem from="1749880641872" duration="599000" />
-      <workItem from="1749881906173" duration="3771000" />
+      <workItem from="1749881906173" duration="4158000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -139,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749721164891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1749886720125</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749886720125</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <option name="closed" value="true" />
+      <created>1749886732918</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749886732918</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +209,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
