@@ -1,100 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookly - Online Book Store</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Tailwind CSS file -->
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 font-sans text-gray-800">
-
-<!-- Header Section -->
-<header class="bg-white py-4 sticky top-0 z-50 shadow-sm">
-    <nav class="container mx-auto px-5 flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold text-primary">Bookly</a>
-
-        <!-- Desktop Navigation -->
-        <ul class="hidden lg:flex items-center gap-8">
-            <li><a href="categories.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Categories</a></li>
-            <li><a href="new-arrival.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">New Arrival</a></li>
-            <li><a href="best-seller.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Best Seller</a></li>
-            <li><a href="about-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About Us</a></li>
-            <li><a href="contact-us.html" class="font-medium text-gray-700 relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact Us</a></li>
-        </ul>
-
-        <div class="flex items-center gap-5">
-            <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" class="text-lg text-gray-600 hover:text-primary"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="login.html" class="hidden sm:inline-block bg-primary text-gray-700 py-2 px-6 rounded-full transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-primary/30">Login</a>
-            <button class="lg:hidden text-2xl text-gray-600">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font-awesome -->
+    <!-- Tailwind style -->
+    <link rel="stylesheet" href="output.css" />
+    <!-- end Tailwind -->
+    <title>ផ្ទះសៀវភៅ​ - BOOK HOUSE</title>
+  </head>
+  <body class="bg-gray-100 dark:bg-neutral-900 font-medium font-sans">
+    <!-- Navbar -->
+    <header
+      class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-700"
+    >
+      <nav
+        class="max-w-[85rem] w-full h mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
+      >
+        <a
+          class="sm:order-1  flex-none text-2xl font-sans  dark:text-white focus:outline-hidden focus:opacity-80"
+          href="index.html"
+          ><img src="../img/logo.png" alt="logo" class="h-12 hs-dark-mode-active:hidden block hs-dark-mode">
+          <img src="../img/logow.png" alt="logow" class="h-12 hs-dark-mode-active:block hidden hs-dark-mode"></a
+        >
+        <div class="sm:order-3 flex items-center gap-x-2">
+          <button
+            type="button"
+            class="sm:hidden hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+            id="hs-navbar-alignment-collapse"
+            aria-expanded="false"
+            aria-controls="hs-navbar-alignment"
+            aria-label="Toggle navigation"
+            data-hs-collapse="#hs-navbar-alignment"
+          >
+            <svg
+              class="hs-collapse-open:hidden shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg
+              class="hs-collapse-open:block hidden shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+            <span class="sr-only">Toggle</span>
+          </button>
+          <button
+            type="button"
+            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+          >
+            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+          </button>
+          <button
+            type="button"
+            class="hs-dark-mode-active:hidden block hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+            data-hs-theme-click-value="dark"
+          >
+            <span
+              class="group inline-flex shrink-0 justify-center items-center size-9"
+            >
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="hs-dark-mode-active:block hidden hs-dark-mode font-medium text-gray-800 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+            data-hs-theme-click-value="light"
+          >
+            <span
+              class="group inline-flex shrink-0 justify-center items-center size-9"
+            >
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </span>
+          </button>
         </div>
-    </nav>
-</header>
-
-<!--body section-->
-
-<!-- Footer -->
-<footer class="bg-white pt-20 pb-8 bottom-0">
-    <div class="container mx-auto px-5">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-center md:text-left">
-            <!-- Column 1 -->
-            <div class="flex flex-col items-center md:items-start">
-                <a href="#" class="text-2xl font-bold text-primary mb-4">Bookly</a>
-                <p class="text-gray-500 mb-6">Your one-stop shop for all the books you love. Dive into a new world with every page.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-1"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <!-- Column 2 -->
-            <div>
-                <h4 class="text-lg font-semibold mb-5">Explore</h4>
-                <ul class="space-y-3">
-                    <li><a href="index.html" class="text-gray-500 hover:text-primary transition-colors">Home</a></li>
-                    <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Categories</a></li>
-                    <li><a href="new-arrival.html" class="text-gray-500 hover:text-primary transition-colors">New Arrival</a></li>
-                    <li><a href="best-seller.html" class="text-gray-500 hover:text-primary transition-colors">Best sellers</a></li>
-
-                </ul>
-            </div>
-            <!-- Column 3 -->
-            <div>
-                <h4 class="text-lg font-semibold mb-5">About</h4>
-                <ul class="space-y-3">
-                    <li><a href="about-us.html" class="text-gray-500 hover:text-primary transition-colors">About Us</a></li>
-                    <li><a href="contact-us.html" class="text-gray-500 hover:text-primary transition-colors">Contact</a></li>
-                    <li><a href="privacy-policy.html" class="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a></li>
-                    <li><a href="termsofervice.html" class="text-gray-500 hover:text-primary transition-colors">Terms of Service</a></li>
-                </ul>
-            </div>
-            <!-- Column 4 -->
-            <div>
-                <h4 class="text-lg font-semibold mb-5">Contact Info</h4>
-                <ul class="space-y-3">
-                    <li><a href="#" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-location-dot w-4"></i>123 Book St, Reading City</a></li>
-                    <li><a href="mailto:hello@bookly.com" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-envelope w-4"></i>hello@bookly.com</a></li>
-                    <li><a href="tel:+1234567890" class="text-gray-500 hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-2"><i class="fa-solid fa-phone w-4"></i>+1 (234) 567-890</a></li>
-                </ul>
-            </div>
+        <div
+          id="hs-navbar-alignment"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2"
+          aria-labelledby="hs-navbar-alignment-collapse"
+        >
+          <div
+            class="flex flex-col gap-15 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 text-xl"
+          >
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-white dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="categories.html"
+              >បណ្តុំសៀវភៅ</a
+            >
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-white dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="best-seller.html"
+              >សៀវភៅលក់ដាច់បំផុត</a
+            >
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-white dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="new-arrival.html"
+              >សៀវភៅថ្មីៗ</a
+            >
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-white dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="about-us.html "
+              >អំពីយើង</a
+            >
+            <a
+              class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-white dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+              href="contact-us.html"
+              >ទំនាក់ទំនង</a
+            >
+          </div>
         </div>
-        <div class="text-center pt-8 border-t border-gray-200 text-gray-500">
-            <p>© 2025 Bookly. All Rights Reserved.</p>
+      </nav>
+    </header>
+    <!-- End Navbar -->
+
+<!-- Slider -->
+<div data-hs-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+    "isAutoPlay": true
+  }' class="relative">
+  <div class="hs-carousel relative overflow-hidden w-full min-h-135 bg-white ">
+    <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+      <div class="hs-carousel-slide">
+        <div class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
+          <img src="../img/bg_Cover1.jpg" alt="bg-Cover1">
         </div>
+      </div>
+      <div class="hs-carousel-slide">
+        <div class="flex justify-center h-full bg-gray-200 p-6 dark:bg-neutral-900">
+          
+          <span class="self-center text-4xl text-gray-800 transition duration-700 dark:text-white"></span>
+          <img src="../img/bg_Cover2.jpg" alt="bg-Cover2">
+        </div>
+      </div>
+      <div class="hs-carousel-slide">
+        <div class="flex justify-center h-full bg-gray-300 p-6 dark:bg-neutral-900">
+          <img src="../img/bg_Cover3.jpg" alt="bg_Cover3">
+        </div>
+      </div>
     </div>
-</footer>
+  </div>
 
-</body>
+  <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
+    <span class="text-2xl" aria-hidden="true">
+      <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6"></path>
+      </svg>
+    </span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
+    <span class="sr-only">Next</span>
+    <span class="text-2xl" aria-hidden="true">
+      <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </span>
+  </button>
+
+  <div class="hs-carousel-pagination justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"></div>
+</div>
+<!-- End Slider -->
+
+    <!-- body -->
+
+        <!-- card top Sell -->
+    <section class="py-10">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/100Story.png"
+              alt="1000 Story of thailand"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                ១០០រឿង ដែលគួរយល់ដឹងពីប្រទេសថៃ
+              </h3>
+             
+              <p class="text-lg font-bold text-blue-600">13,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/money.png"
+              alt="money"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សៀវភៅ ចិត្តវិទ្យាអំពីប្រាក់ </h3>
+              <p class="text-lg font-bold text-blue-600">28,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/WarHeroes.png"
+              alt="War Heroes"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">វីរបុរសសង្គ្រាមដ៏អស្ចារ្យក្នុងពិភពលោក</h3>
+              
+              <p class="text-lg font-bold text-blue-600">7,500.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/thinks.png"
+              alt=""
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សៀវភៅរឿង គតិរួមលោក</h3>
+              
+              <p class="text-lg font-bold text-blue-600">12,500.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/succenquotes.png"
+              alt="succenquotes"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សៀវភៅ សុភាសិតជោគជ័យ</h3>
+          
+              <p class="text-lg font-bold text-blue-600">15,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/brain.png"
+              alt="brain"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">ខួរក្បាលខ្មែរ ទម្ងន់ប៉ុន្មាន?</h3>
+              
+              <p class="text-lg font-bold text-blue-600">25,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/manlover.png"
+              alt="manlover"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សៀវភៅ បុរសមកពីឋាន​ព្រះអង្គារ
+              </h3>
+    
+              <p class="text-lg font-bold text-blue-600">25,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/little.png"
+              alt="little story"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">រឿងតូចតាច អត្ថន័យធំធេង</h3>
+              
+              <p class="text-lg font-bold text-blue-600">15,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/quotation.png"
+              alt="quotation"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សំនួនវោហារក្នុង​ពិភព​យុទ្ធគុនចិន</h3>
+              
+              <p class="text-lg font-bold text-blue-600">12,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/100.png"
+              alt="100 thinking"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">១០០ គំនិតយកឈ្នះភាពក្រីក្រ</h3>
+             
+              <p class="text-lg font-bold text-blue-600">25,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 11 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/howtowinfriend.png"
+              alt="How to win friend"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សិល្បៈចងមិត្ត​ បន្ទន់ចិត្តអ្នកដទៃ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">28,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 12 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/100thinking.png"
+              alt="100 thinking"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">១០០គតិបណ្ឌិតដើម្បីទទួលបានជោគជ័យ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">11,000.00៛
+
+</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+            
+          </div>
+          
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/howreadbook.png"
+              alt="1000 Story of thailand"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                វិធីសាស្រ្ត​ក្នុងការអានសៀវភៅ
+              </h3>
+             
+              <p class="text-lg font-bold text-blue-600">28,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/21success.png"
+              alt="money"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">២១ អាថ៌កំបាំងជោគជ័យមហាសេដ្ឋី</h3>
+              <p class="text-lg font-bold text-blue-600">75,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white  rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/miracel.png"
+              alt="War Heroes"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">វិថីឆ្ពោះទៅកាន់មហាសេដ្ឋីពេលព្រឹកដ៏អស្ចារ្យ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">32,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/learnlikepro.png"
+              alt="learn like pro"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">សៀវភៅ គន្លឹះក្លាយជាសិស្សពូកែ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">24,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/6quote.png"
+              alt="succenquotes"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">៦យុទ្ធសាស្រ្តក្លាយជាអ្នកដឹកនាំ</h3>
+          
+              <p class="text-lg font-bold text-blue-600">28,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/standstrong.png"
+              alt="brain"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Stand Trong ឈរនៅលើគោលជំហរដីរឹងមាំ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">25,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/qas.png"
+              alt="manlover"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">កម្រងសំណួរ-ចម្លើយវិញ្ញាសាវប្បធម៌ទូទៅ
+              </h3>
+    
+              <p class="text-lg font-bold text-blue-600">20,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/222.png"
+              alt="little story"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">២២២ទស្សនៈនៃភាពជាអ្នកដឹកនាំ</h3>
+              
+              <p class="text-lg font-bold text-blue-600">26,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/108meal.png"
+              alt="quotation 108"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">១០៨ ចក្ខុវិស័យ គួច ម៉េងលី</h3>
+              
+              <p class="text-lg font-bold text-blue-600">34,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/leadership.png"
+              alt="Leadership"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">គតិបណ្ឌិត ភាពជាអ្នកដឹកនាំ</h3>
+             
+              <p class="text-lg font-bold text-blue-600">10,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 11 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/30.png"
+              alt="30"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">៣០អាថ៌កំបាំងនៅពីក្រោយជីវិត</h3>
+              
+              <p class="text-lg font-bold text-blue-600">22,000.00៛</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+          </div>
+          <!-- Card 12 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="../img/3minus.png"
+              alt="3 minus change your life"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">៣នាទីផ្លាស់ប្តូរជីវិតឱ្យប្រសើរលើសដើម</h3>
+              
+              <p class="text-lg font-bold text-blue-600">20,000.00៛
+
+</p>
+              <a
+                href="#"
+                class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                >ជាវឥឡូវនេះ</a
+              >
+            </div>
+            
+          </div>
+       
+        </div>
+
+               <div class="py-2">
+          <div dir="rtl">
+          
+              <a href="" class=" bg-blue-600 text-neutral-50 py-2 px-10 gap-2 rounded inline-flex dark:text-neutral-50 ">
+    <span>
+        មើលបន្ថែមទៀត
+    </span>
+    <svg class="w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+    </svg>
+</a>
+            </div>
+          </div>
+       
+      </div>
+      
+    </section>
+     <!-- End card top sell -->
+     <!-- End cbody -->
+
+
+
+    <!-- Footer -->
+    <footer
+      class="bg-white pt-20 pb-8 bottom-0 dark:bg-neutral-800 dark:text-white"
+    >
+      <div class="container mx-auto px-5">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-center md:text-left"
+        >
+          <!-- Column 1 -->
+          <div class="flex flex-col items-center md:items-start">
+            <a href="#" class="text-2xl font-bold text-primary mb-4">ផ្ទះសៀវភៅ (BOOK HOUSE)<a>
+            <p class="text-gray-500 dark:text-white mb-6">
+              គេហទំព័រលក់សៀវភៅដ៏ធំបំផុត<br>នៅព្រះរាជាណាចក្រកម្ពុជា
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white dark:bg-neutral-900 hover:-translate-y-1"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white dark:bg-neutral-900 hover:-translate-y-1"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white dark:bg-neutral-900 hover:-translate-y-1"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-primary rounded-full shadow-md transition-all duration-300 hover:bg-primary hover:text-white dark:bg-neutral-900 hover:-translate-y-1"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <div>
+            <h4 class="text-lg font-semibold mb-5">ព័ត៌មានសំខាន់ផ្សេងៗ</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >ទំព័រដើម</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >បណ្តុំសៀវភៅ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="new-arrival.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >សៀវភៅថ្មីៗ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="best-seller.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >សៀវភៅលក់ដាច់បំផុត</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Column 3 -->
+          <div>
+            <h4 class="text-lg font-semibold mb-5">សេវាបម្រើអតិថិជន</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="about-us.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >អំពីយើង</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact-us.html"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors"
+                  >ទំនាក់ទំនង</a
+                >
+              </li>
+            
+            </ul>
+          </div>
+          <!-- Column 4 -->
+          <div>
+            <h4 class="text-lg font-semibold mb-5">ព័ត៌មានបន្ថែម សូមទំនាក់ទំនងយើង៖</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors flex items-center justify-center md:justify-start gap-2"
+                  ><i class="fa-solid fa-location-dot w-4"></i>ផ្ទះ១៦៨ ផ្លូវសុភមង្គល សង្កាត់រីករាយ <br>ខណ្ឌសុខសាន្ត រាជធានីភ្នំពេញ </a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@bookhouse.com.kh"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors flex items-center justify-center md:justify-start gap-2"
+                  ><i class="fa-solid fa-envelope w-4"></i>info@bookhouse.com.kh</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+85512345678"
+                  class="text-gray-500 hover:text-primary dark:text-white transition-colors flex items-center justify-center md:justify-start gap-2"
+                  ><i class="fa-solid fa-phone w-4"></i>+855 (012) 345-678</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class=" pt-2 border-t border-gray-200 text-gray-500 dark:text-neutral-200">
+          <p>© ២០២៥ រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖​ <a href="index.html"> ផ្ទះសៀវភៅ</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="../node_modules/preline/dist/preline.js"></script>
+  </body>
 </html>
